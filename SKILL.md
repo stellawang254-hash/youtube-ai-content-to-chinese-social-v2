@@ -15,12 +15,29 @@ Do not force every YouTube learning item into an article. The learning note is t
 
 Follow this sequence unless the user explicitly narrows the task:
 
-1. Extract or accept the English source material.
-2. Produce Chinese learning notes, a method summary, and an actionable checklist.
-3. Run the route decision.
-4. If publishable, choose one or more output routes.
-5. Apply the personal voice profile before writing.
-6. Add platform-specific versions only after the route is clear.
+1. Run source ops if the user only gives a URL, channel name, or search topic.
+2. Extract or accept the English source material.
+3. Produce Chinese learning notes, a method summary, and an actionable checklist.
+4. Run the route decision.
+5. If publishable, choose one or more output routes.
+6. Apply the personal voice profile before writing.
+7. Add platform-specific versions only after the route is clear.
+
+## Source Ops
+
+Read `references/source_ops.md` when the task starts from a YouTube URL, channel, keyword, or any source that still needs discovery, subtitle extraction, transcription, or transcript cleaning.
+
+Source ops should handle:
+- English YouTube search
+- multi-pass search
+- metadata fetching
+- subtitle extraction
+- transcript fallback
+- Whisper fallback
+- SRT cleaning
+- failure handling
+
+If the user already provides a clean transcript or a learning note, skip source ops unless they ask for verification or recovery.
 
 ## Required Routes
 
@@ -91,6 +108,17 @@ Learning notes must include:
 - What can be tried today
 - What is still uncertain
 - Whether the material is worth publishing
+
+## Source Ops Details
+
+Read these files when the task involves acquisition or cleaning:
+- `references/source_ops.md`
+- `references/youtube_search_strategy.md`
+- `references/transcript_extraction_fallbacks.md`
+- `references/transcript_cleaning_rules.md`
+- `references/test_cases.md`
+
+Use the `scripts/clean_subtitles.py` helper when the input is an SRT subtitle file with repeated lines.
 
 ## Normal Publishing Route
 
@@ -190,4 +218,3 @@ Output:
 - Enterprise opportunity brief
 - Enterprise WeChat article
 - One lead-capture action
-
