@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube AI 企业内容 2.0"
+  short_description: "把英文 YouTube AI 内容转成中文学习笔记、普通公众号稿和企业 AI 落地线索型内容。"
+  default_prompt: "请使用这个 skill 处理英文 YouTube AI 视频：先生成中文学习笔记，再判断是否适合普通公众号或企业 AI 落地公众号，并输出对应内容。"
