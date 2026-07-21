@@ -1,6 +1,6 @@
 ---
 name: youtube-ai-content-to-chinese-social-v2
-description: Turn English YouTube AI videos, transcripts, or AI learning topics into Chinese learning notes first, then route them into either normal WeChat publishing, enterprise AI implementation content for demand generation, Xiaohongshu notes, or short video scripts. Use when the user wants learning-first Chinese content from YouTube AI material, wants to judge whether a video is publishable, wants enterprise AI landing/advisory articles for decision makers, or wants each article to include practical judgment, objections, risks, ROI, and a lead-capture action.
+description: Turn English YouTube AI videos, transcripts, or AI learning topics into Chinese learning notes, then conditionally route qualified material into normal learning-account content or separate enterprise AI demand-generation content. Use for YouTube AI learning, publishability assessment, Chinese WeChat or social adaptations, and enterprise AI implementation articles grounded in a real business problem, identifiable decision maker, supported risks, ROI evidence or validation plan, and a matching lead-capture action.
 ---
 
 # YouTube AI Content to Chinese Social 2.0
@@ -68,11 +68,11 @@ Output:
 
 Use only when the content can connect to a real enterprise problem and a clear target decision maker.
 
-Required inputs or inferred fields:
+Required inputs:
 - enterprise_problem
 - target_decision_maker
-- business_scenario
-- practical_result_or_validation_path
+- business_scenario supported by the source, user context, or a documented validation path
+- practical_result or validation_path
 
 Output:
 - Chinese learning notes
@@ -80,6 +80,18 @@ Output:
 - Enterprise WeChat article
 - Platform variants
 - One lead-capture action
+
+Do not invent enterprise context to satisfy Route 2. If `enterprise_problem` or `target_decision_maker` is missing, do not generate Route 2.
+
+## Account Separation
+
+Route 1 belongs to the AI learning account.
+
+Route 2 belongs to the enterprise AI implementation account.
+
+A source may qualify for both routes, but generate two separate artifacts for two different audiences.
+
+Never create enterprise content by merely adding ROI, risks, or a lead-capture action to the end of a learning article.
 
 ## Route Decision
 
@@ -143,7 +155,7 @@ Enterprise AI content must include:
 - Target decision maker
 - Applicable conditions
 - Non-applicable conditions
-- Investment and return
+- Known investment and return evidence, or an ROI hypothesis and measurement plan
 - Implementation risks
 - Practical result or validation path
 - The author's judgment
@@ -152,18 +164,22 @@ Enterprise AI content must include:
 
 Never write enterprise AI implementation content by only summarizing or translating YouTube material.
 
+Do not invent numerical ROI, cost savings, conversion gains, client results, or implementation cases.
+
 ## Personal Voice
 
 Read `references/personal_voice_profile.md` before producing publishable outputs.
 
 The article voice should come from:
-- Practical testing
+- Supplied practical testing or clearly labeled validation plans
 - Clear judgment
 - Conservative implementation advice
 - Willingness to say "not suitable"
 - Business-context thinking
 
 Do not simulate personality with catchphrases. Express the author's personality through judgment density, tradeoffs, objections, and grounded examples.
+
+Never claim personal testing, client experience, project results, or first-hand observations unless the user supplied them. When no first-hand evidence exists, clearly distinguish source claims, author inference, and proposed validation.
 
 ## Platform Variants
 
@@ -184,7 +200,8 @@ Always avoid:
 - Pure summary of the YouTube video
 - Hype-first AI writing
 - Generic "AI era" openings
-- Enterprise advice without business scenario, conditions, risks, and ROI
+- Enterprise advice without business scenario, conditions, risks, and ROI evidence or validation plan
+- Fabricated enterprise context, ROI numbers, client cases, or personal test results
 - Lead-capture actions that do not match the article
 
 Prefer:

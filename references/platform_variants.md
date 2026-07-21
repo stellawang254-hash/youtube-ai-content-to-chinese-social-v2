@@ -23,7 +23,7 @@ Purpose:
 
 Style:
 - Business problem first
-- Conditions, ROI, risk, objection
+- Conditions, ROI evidence or validation plan, risk, objection
 - One lead-capture action
 
 ## Xiaohongshu
@@ -55,4 +55,3 @@ Structure:
 - One action
 
 Keep the spoken script simple and concrete.
-

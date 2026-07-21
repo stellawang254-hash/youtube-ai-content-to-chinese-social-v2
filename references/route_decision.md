@@ -16,6 +16,7 @@ Optional but important:
 - content_goal
 - platform_goal
 - practical_result
+- validation_path
 
 ## Step 1: Learning Value
 
@@ -61,7 +62,31 @@ A source is suitable for enterprise AI implementation content only if it can ans
 - What objection should be included?
 - What lead-capture action naturally follows?
 
-If any of the first four answers are vague, do not use the enterprise route.
+## No-Fabrication Gate
+
+Do not invent enterprise context to satisfy Route 2.
+
+Only use Route 2 when `enterprise_problem` and `target_decision_maker` are present or directly supported by:
+- source material
+- user-provided business context
+- documented practical testing
+- a supplied case
+
+If `enterprise_problem` or `target_decision_maker` is missing, do not generate Route 2.
+
+If the validation path is uncertain, state what is missing and recommend Learning Only or Route 1.
+
+## ROI Gate
+
+Never invent numerical ROI, cost savings, conversion gains, headcount savings, payback period, or revenue impact.
+
+When evidence is unavailable, output:
+- what baseline must be measured
+- which metrics should validate the idea
+- how long the small validation should run
+- what result threshold would justify expanding the work
+
+If any of the first four enterprise-fit answers are vague, do not use the enterprise route.
 
 ## Recommended Output Format
 
@@ -78,6 +103,9 @@ enterprise_ai_fit:
   fit: yes/no
   enterprise_problem: ""
   target_decision_maker: ""
+  evidence_source: source_material / user_context / practical_test / supplied_case / missing
+  missing_requirements:
+    - ""
   reason: ""
 
 recommended_route: learning_only / normal_wechat / enterprise_ai / normal_and_enterprise
@@ -93,4 +121,4 @@ next_required_inputs:
 - If normal WeChat fits but enterprise fields are vague, choose normal_wechat.
 - If enterprise route fits, still preserve the learning note first.
 - If both routes fit, generate separate versions. Do not blend them into one article.
-
+- If Route 2 is missing a real business problem or decision maker, never generate it.

@@ -6,6 +6,8 @@ Use this route for demand-generation articles around enterprise AI implementatio
 
 Use the enterprise opportunity brief, not raw YouTube material.
 
+Do not create enterprise content by adding an ROI paragraph, risk paragraph, or lead-capture action to the end of a Route 1 learning article.
+
 ## Article Must Include
 
 - Enterprise problem
@@ -13,7 +15,7 @@ Use the enterprise opportunity brief, not raw YouTube material.
 - Business scenario
 - Applicable conditions
 - Non-applicable conditions
-- Investment and return
+- Known investment and return evidence, or an ROI hypothesis and measurement plan
 - Implementation risks
 - Practical result or validation path
 - Author judgment
@@ -39,6 +41,8 @@ Use the enterprise opportunity brief, not raw YouTube material.
 
 ## 投入和收益大概怎么算
 
+没有数据时，写成 ROI 假设和验证计划，不要写成确定收益。
+
 ## 最大的落地风险
 
 ## 我的判断：先做小验证，不要直接做大系统
@@ -63,6 +67,18 @@ Do not attach generic sales copy.
 ## Voice Rules
 
 - Be specific, not grand.
-- Prefer "I tested / I would first check / I do not recommend" over broad claims.
+- Use "I tested" only when the user supplied a real test. Otherwise prefer "I would first check / this should be validated by / I do not recommend".
 - Keep trust higher than conversion pressure.
 
+## No-Fabrication Rules
+
+Never invent:
+- personal tests
+- client experience
+- project results
+- numerical ROI
+- cost savings
+- conversion gains
+- implementation cases
+
+When evidence is missing, state the missing evidence and provide a validation path.

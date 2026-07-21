@@ -9,6 +9,7 @@ This is a learning-first Codex/Hermes skill for turning English YouTube AI conte
 - Decide whether the source is suitable for public publishing.
 - Split publishing into normal WeChat content and enterprise AI implementation content.
 - Require enterprise content to include business scenario, applicable conditions, investment and return, implementation risks, practical judgment, objections, and one lead-capture action.
+- Block fabricated enterprise context, ROI numbers, client cases, and personal test claims.
 - Preserve the author's personal voice through practical testing, clear judgment, and conservative implementation advice.
 
 ## Main Workflow
